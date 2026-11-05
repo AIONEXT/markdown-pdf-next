@@ -1,0 +1,56 @@
+{
+  "name": "markdown-pdf-next",
+  "version": "0.1.0",
+  "description": "Modern Markdown to PDF converter using Puppeteer/Playwright — rewrite of abandoned markdown-pdf with PDF/A, accessibility, streaming, and React component support",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write src",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test && npm run lint"
+  },
+  "keywords": ["markdown", "pdf", "puppeteer", "playwright", "pdf-a", "accessibility", "react"],
+  "author": "AIONEXT <aionext@outlook.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AIONEXT/markdown-pdf-next.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AIONEXT/markdown-pdf-next/issues"
+  },
+  "homepage": "https://github.com/AIONEXT/markdown-pdf-next#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "markdown-it": "^14.0.0",
+    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-toc-done-right": "^4.2.0",
+    "puppeteer": "^21.6.1",
+    "playwright": "^1.41.0",
+    "pdf-lib": "^1.17.1",
+    "css-tree": "^2.3.1",
+    "postcss": "^8.4.32",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/markdown-it": "^14.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}
